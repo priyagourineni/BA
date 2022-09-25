@@ -1,0 +1,36 @@
+---
+title: "2@Setting Up R 2"
+author: "Priya Rao"
+date: '2022-09-25'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+install.packages("ISLR",repos = "http://cran.us.r-project.org")
+library(ISLR)
+
+```
+
+```{r}
+X<-Carseats
+summary(Carseats)
+print(Carseats)
+
+```
+
+```{r}
+max(Carseats$Sales)
+hist(Carseats$Sales)
+```
+
+```{r}
+IQR(Carseats$Price)
+```
+
+```{r}
+graph<-plot(Carseats$Sales, Carseats$Price, main = "Scatterplot", xlab = "Sales", ylab = "Price",abline(Carseats$Sales,Carseats$Price))
+```
